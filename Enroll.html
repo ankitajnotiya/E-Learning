@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+    }
+    form {
+        background-color:rgb(205, 188, 191);
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        background-color:yellowgreen;
+        color: white;
+        padding: 10px 20px;
+        margin: 6px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: red;
+    }  
+.form1{
+        color: red;
+        font-size: 20px;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+    
+<form id="registration">
+    <div class="form1">
+
+    <h2>Enroll Form</h2></div>
+    <input type="text" id="username" placeholder="Enter Your Username" required>
+    <input type="email" id="email" placeholder="Enter Your Email" required>
+    <input type="password" id="password" placeholder=" Enter Your Password" required>
+    <input type="text" id="contact" placeholder=" Enter Your Contact Number" required>
+    <input type="text" id="message" placeholder=" Enter Your Message" required>
+
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const contact = document.getElementById('contact').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+
+
+        if (!username || !email || !password || !contact || !message) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        alert('Registation Successful');
+    });
+    
+</script>
+</body>
+</html>
